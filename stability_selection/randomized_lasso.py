@@ -115,14 +115,14 @@ class RandomizedLasso(Lasso):
     sklearn.linear_model.LogisticRegression : learns logistic regression models
     using the same algorithm.
     """
-    def __init__(self, weakness=0.5, alpha=1.0, fit_intercept=True, normalize=False,
+    def __init__(self, weakness=0.5, alpha=1.0, fit_intercept=True,
                  precompute=False, copy_X=True, max_iter=1000,
                  tol=1e-4, warm_start=False, positive=False,
                  random_state=None, selection='cyclic'):
         self.weakness = weakness
         super(RandomizedLasso, self).__init__(
             alpha=alpha, fit_intercept=fit_intercept,
-            normalize=normalize, precompute=precompute, copy_X=copy_X,
+            precompute=precompute, copy_X=copy_X,
             max_iter=max_iter, tol=tol, warm_start=warm_start,
             positive=positive, random_state=random_state,
             selection=selection)
